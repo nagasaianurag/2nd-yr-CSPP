@@ -6,10 +6,16 @@
 # assert(dicetoorderedhand(1,2,3) == 321)
 # assert(dicetoorderedhand(6,5,4) == 654)
 # assert(dicetoorderedhand(1,4,2) == 421)
-# assert(dicetoorderedhand(6,5,6) == 665)
+# assert(dicetoorderedhand(6,5,6) == 665)	
 # assert(dicetoorderedhand(2,2,2) == 222)
 
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	pass
+	l = [a,b,c]
+	l.sort(reverse=True)
+	strings = [str(i) for i in l]
+	s = "".join(strings)
+	num = int(s)
+	return num
+print(dicetoorderedhand(6,5,6))
