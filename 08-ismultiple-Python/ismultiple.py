@@ -6,4 +6,15 @@
 
 
 def fun_ismultiple(m, n):
-	return False # replace with your solution
+	if m==0:
+		return True
+	elif n==0:
+		return False
+	elif m%n==0:
+		return True
+	else:
+		return False # replace with your solution
+
+# m=int(input())
+# n=int(input())
+# print(fun_ismultiple(m, n))
