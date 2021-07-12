@@ -15,7 +15,6 @@ def dicetoorderedhand(a, b, c):
 	l = [a,b,c]
 	l.sort(reverse=True)
 	strings = [str(i) for i in l]
-	s = "".join(strings)
-	num = int(s)
-	return num
+	string = "".join(strings)
+	return int(string)
 print(dicetoorderedhand(6,5,6))
