@@ -35,4 +35,33 @@
 
 def playstep2(hand, dice):
 	# your code goes here
-	pass
+	previous = list(str(hand))
+	future = list(str(dice))
+
+	if len(future) > 1:
+		if previous[0] == previous[1]:
+			previous[2] = future[-1]
+			future = future[:-1]
+
+		elif previous[1] == previous[2]:
+			previous[0] = future[-1]
+			future = future[:-1]
+			print(future, 1)
+
+		else:
+			
+			if previous[0] < future[-1]:
+				previous[1] = previous[0]
+				previous[0] = future[-1]
+				previous[2] = future[-2]
+				future = future[:-2]
+			else:
+				previous[1] = future[-1]
+				previous[2] = future[-2]
+				future = future[:-2]
+				
+	previous.sort(reverse=True)
+	previous = int("".join(previous))
+	future = int("".join(future))
+
+	return (previous, future)
