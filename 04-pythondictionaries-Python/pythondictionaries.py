@@ -13,11 +13,8 @@ Shanghai (China, Asia)"""
 
 
 """Print the following (using "print").
-1. A list of all cities in the USA in
-alphabetic order. Make it function with name as sortUSA(), return list of cities
-2. All cities in Asia, in alphabetic
-order, next to the name of the country.
-In your output, label each answer with a number
+1. A list of all cities in the USA in alphabetic order. Make it function with name as sortUSA(), return list of cities
+2. All cities in Asia, in alphabetic order, next to the name of the country. In your output, label each answer with a number
 so it looks like this: (Make it function with name as alphaAsia(), return list of cities)
 1
 American City
@@ -29,14 +26,19 @@ Asian City - Country"""
 
 def sortUSA():
     '''Return all the cities in the USA in alphabetical order'''
-    pass
+    return locations['North America']['USA']
 
 def alphaAsia():
     '''Return all the cities in Asia continent in alphabetical order'''
-    pass
+    a_city = []
+    for countries, cities in locations['Asia'].items():
+        city_and_country = cities[0] + " - " + countries 
+        a_city.append(city_and_country)
+    result = sorted(a_city)
+    return result
 
 # Note: Check for test cases to understand the output format.
-locations = {'North America': {'USA': ['Atlanta','Mountain View']},
-            'Asia' : {'India' : ['Bangalore'],'China': ['Shanghai']}, 
-            'Africa' : {'Egypt' : ['Cairo']}
-            }
+locations = {'North America': {'USA': ['Atlanta','Mountain View']}}
+locations['Asia'] = {'India': ['Bangalore']}
+locations['Asia']['China'] = ['Shanghai']
+locations['Africa'] = {'Egypt': ['Cairo']}
