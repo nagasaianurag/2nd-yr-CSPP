@@ -10,5 +10,3 @@ def fun_nearestodd(n):
 		return(int(n-1))
 	else:
 		return(int(n))
-
-
