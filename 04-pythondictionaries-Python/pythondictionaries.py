@@ -36,4 +36,7 @@ def alphaAsia():
     pass
 
 # Note: Check for test cases to understand the output format.
-locations = {'North America': {'USA': ['Mountain View']}}
+locations = {'North America': {'USA': ['Atlanta','Mountain View']},
+            'Asia' : {'India' : ['Bangalore'],'China': ['Shanghai']}, 
+            'Africa' : {'Egypt' : ['Cairo']}
+            }
