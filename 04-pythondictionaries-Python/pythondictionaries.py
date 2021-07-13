@@ -1,13 +1,9 @@
-"""Time to play with Python dictionaries!
-You're going to work on a dictionary that
-stores cities by country and continent.
-One is done for you - the city of Mountain 
+"""Time to play with Python dictionaries! You're going to work on a dictionary that
+stores cities by country and continent. One is done for you - the city of Mountain 
 View is in the USA, which is in North America.
 
-You need to add the cities listed below by
-modifying the structure.
-Then, you should print out the values specified
-by looking them up in the structure.
+You need to add the cities listed below by modifying the structure.
+Then, you should print out the values specified by looking them up in the structure.
 
 Cities to add:
 Bangalore (India, Asia)
