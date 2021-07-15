@@ -13,7 +13,7 @@
 
 
 def fabricyards(inches):
-	# Your code goes here...
+
 	if inches%36 == 0:
 		return inches//36
 	else:
@@ -22,7 +22,7 @@ def fabricyards(inches):
 	return yards
 
 def fabricexcess(inches):
-	# Your code goes here...
+
 	if inches%36 == 0:
 		return inches%36
 	else:
