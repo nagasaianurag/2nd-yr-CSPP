@@ -16,4 +16,26 @@
 
 
 def nth_happy_number(n):
-	return 0
+	found=0;guess=0
+	while (found<=n):
+		guess+=1
+		if (ishappy(guess)):
+			found+=1
+			print(found)
+	return guess
+
+def ishappy(m):
+    while(m>=10):
+        m=squarenum(m)
+        if(m==1):
+            return True
+    return False
+
+def squarenum(b):
+    sum=0
+    while(b>0):
+        rem=b%10
+        sum+=(rem*rem)
+        b//=10
+    return sum  
+
