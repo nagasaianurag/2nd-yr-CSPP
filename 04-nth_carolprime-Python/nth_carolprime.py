@@ -8,6 +8,27 @@
 # Hint: you may need to generate only Carol numbers, and then test those as you go 
 # for primality (and you may need to think about that hint for a while for it to make sense!).
 
-
 def fun_nth_carolprime(n):
-    return 0
+    found=-1
+    guess=0
+    while found<n:
+        a=(2**guess-1)**2-2
+        if isPrime(a):
+            found+=1
+        guess+=1
+    guess-=1
+    return (2**guess-1)**2-2
+
+def isPrime(n):
+    if n<=1:
+        return False
+    if n==2:
+        return True
+    if n%2==0:
+        return False
+    
+    maxFactor=round(n**0.5)
+    for factor in range(3,maxFactor+1,2):
+        if(n%factor==0):
+            return False
+    return True
