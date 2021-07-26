@@ -14,14 +14,14 @@
 # assert(nth_happy_number(7) == 28)
 # assert(nth_happy_number(8) == 31)
 
-
 def nth_happy_number(n):
     if n==1:
         return 1
     if n==2:
         return 7
 
-    a=2;b=8
+    a=2
+    b=8
     while a<=n:
         if ishappy(b):
             a+=1
@@ -30,7 +30,7 @@ def nth_happy_number(n):
         b+=1
 
 def ishappy(m):
-    while(m>=10):
+    while m>=10:
         m=squarenum(m)
         if(m==1):
             return True
@@ -38,8 +38,8 @@ def ishappy(m):
 
 def squarenum(b):
     sum=0
-    while(b>0):
+    while b>0:
         rem=b%10
         sum+=(rem*rem)
         b//=10
-    return sum  
+    return sum
