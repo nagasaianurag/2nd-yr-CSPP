@@ -11,7 +11,7 @@
 
 # Prerequisite for the following problem is the above problem.
 # Write the function inverseLookAndSay(a) that does the inverse of the above problem, so that, in general:
-#       inverseLookAndSay(lookAndSay(a)) == a
+# inverseLookAndSay(lookAndSay(a)) == a
 # Or, in particular:
 # inverseLookAndSay([(2,3),(1,8),(3,-10)]) == [3,3,8,-10,-10,-10]
 # inverseLookAndSay([]) == []
@@ -21,5 +21,13 @@
 # inverseLookAndSay([(2,3),(1,8),(4,3)]) == [3,3,8,3,3,3,3])
 
 def inverselookandsay(a):
-	# Your code goes here
-	pass
+	if a == [] :
+		return []
+		
+	result=[]
+	for i in a:
+		if i == ():
+			return []
+		for j in range(i[0]):
+			result.append(i[1])
+	return result
