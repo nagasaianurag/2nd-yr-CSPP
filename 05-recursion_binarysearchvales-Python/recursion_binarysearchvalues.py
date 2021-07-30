@@ -36,4 +36,4 @@ def binarysearch(L,v,lo,hi,l1=[]):
 		lo=mid+1
 	return binarysearch(L,v,lo,hi,l1)
 
-# print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'z'))
+# print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'b'))
