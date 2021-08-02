@@ -7,8 +7,17 @@
 
 def nthcircularprime(x):
 	x=abs(x)
-	count=1
-	start=0
+	if x==1:
+		return 2
+	if x==2:
+		return 3
+	if x==3:
+		return 5
+	if x==4:
+		return 7
+
+	count=4
+	start=10
 	while(count<=x):
 		start+=1
 		if(isprime(start) and cheakcircular(start)):
@@ -47,5 +56,3 @@ def lendigits(n):
 		count+=1
 		n//=10
 	return count
-
-print(nthcircularprime(5))
