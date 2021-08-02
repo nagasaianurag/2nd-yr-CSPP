@@ -5,5 +5,20 @@
 # the nth number with Property309.
 
 def nthwithproperty309(n):
-	# Your code goes here
-	pass
+	if n==0:
+		return 309
+	x=1
+	y=310
+	while(x<=n):
+		y+=1
+		if(withproperty(y)):
+			x+=1
+	return y
+
+def withproperty(n):
+	power5 = str(n**5)
+	l = ['0','1','2','3','4','5','6','7','8','9']
+	for i in l:
+		if(i not in power5):
+			return False
+	return True
