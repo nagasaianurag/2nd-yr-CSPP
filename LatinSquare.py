@@ -1,4 +1,3 @@
-# isLatinSquare(a)
 # Write the function isLatinSquare(a) that takes a 2d list 
 # and returns True if it is a Latin square and False otherwise.
 
@@ -8,5 +7,5 @@
 # Write your own test cases...
 
 def isLatinSquare(lst):
-    # Your code goes here...
-    pass
+
+    return
